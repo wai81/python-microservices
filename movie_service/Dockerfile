@@ -8,6 +8,8 @@ RUN apt-get update \
     && apt-get install gcc -y \
     && apt-get clean
 
+RUN pip install --upgrade pip
+
 RUN pip install -r /app/requirements.txt \
     && rm -rf /root/.cache/pip
 
